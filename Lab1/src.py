@@ -1,3 +1,6 @@
+"""This a piece of code that solves the Aggressivecows problem in python
+it's purpose is to test the functioning of a pylint workflow in this repo"""
+
 import sys
 
 def can_place(stalls, cows, dist):
@@ -27,10 +30,10 @@ def aggressive_cows(stalls, cows):
 
 data = sys.stdin.read().split()
 t = int(data[0])
-idx = 1
+IDX = 1
 for _ in range(t):
-    n, c = int(data[idx]), int(data[idx+1])
-    idx += 2
-    stalls = list(map(int, data[idx:idx+n]))
-    idx += n
-    print(aggressive_cows(stalls, c))
+    n, c = int(data[IDX]), int(data[IDX+1])
+    IDX += 2
+    s = list(map(int, data[IDX:IDX+n]))
+    IDX += n
+    print(aggressive_cows(s, c))
