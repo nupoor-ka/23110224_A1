@@ -4,6 +4,9 @@ it's purpose is to test the functioning of a pylint workflow in this repo"""
 import sys
 
 def can_place(stalls, cows, dist):
+    """
+    Checking whether this minimum distance dist is ok
+    """
     count = 1  # first cow at first stall
     last_position = stalls[0]
     for i in range(1, len(stalls)):
@@ -15,6 +18,9 @@ def can_place(stalls, cows, dist):
     return False
 
 def aggressive_cows(stalls, cows):
+    """
+    Running the function on different possible values of distance, binary search on answer
+    """
     stalls.sort()
     low, high = 1, stalls[-1] - stalls[0]
     best = 0
